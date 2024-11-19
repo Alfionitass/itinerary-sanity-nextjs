@@ -97,12 +97,10 @@ export default async function Itinerary() {
       {itineraryList?.map((item) => (
         <Accordion
           key={Math.random()}
-          collapseAll= {true}
+          collapseAll={true}
           className="itinerary bg-white-500 hover:bg-white-600 text-gray-700 rounded-md mb-4"
         >
-          <AccordionPanel
-            className="bg-white-500 hover:bg-white-600 md-absolute w-full"
-          >
+          <AccordionPanel className="bg-white-500 hover:bg-white-600 md-absolute w-full">
             <AccordionTitle className="accordion">
               <div className="flex flex-row">
                 <Image
@@ -153,7 +151,7 @@ export default async function Itinerary() {
                     {item.subtitle}
                   </h4>
                   {item.details?.map((detail) => (
-                    <div className="flex flex-row mb-4">
+                    <div key={Math.random()} className="flex flex-row mb-4">
                       {detail.title && detail.title.indexOf("Transfer") > -1 ? (
                         <DirectionsBusOutlinedIcon />
                       ) : detail.title &&
@@ -192,6 +190,7 @@ export default async function Itinerary() {
                   <div className="flex flex-row">
                     {item.details2?.map((value) => (
                       <Card
+                        key={Math.random()}
                         className="max-w-sm mr-4 mb-6"
                         renderImage={() => (
                           <Image
