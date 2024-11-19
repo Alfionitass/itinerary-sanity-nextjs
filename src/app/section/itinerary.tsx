@@ -1,13 +1,11 @@
-import { defineQuery, PortableText } from "next-sanity";
+import { defineQuery } from "next-sanity";
 import { sanityFetch } from "@/sanity/live";
 import { client } from "@/sanity/client";
 import { SanityImageSource } from "@sanity/image-url/lib/types/types";
 import imageUrlBuilder from "@sanity/image-url";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import type { CustomFlowbiteTheme } from "flowbite-react";
 import {
-  Flowbite,
   Accordion,
   AccordionContent,
   AccordionPanel,
@@ -21,7 +19,6 @@ import FlatwareOutlinedIcon from "@mui/icons-material/FlatwareOutlined";
 import CheckIcon from "@mui/icons-material/Check";
 import SimCardDownloadIcon from "@mui/icons-material/SimCardDownload";
 import PrintIcon from "@mui/icons-material/Print";
-import { ITINERARY_QUERY2Result } from "../../sanity/types";
 
 const ITINERARY_QUERY = defineQuery(`*[
     _type == "itineraryTab"
@@ -148,7 +145,7 @@ export default async function Itinerary() {
                 </div>
               </div>
             </AccordionTitle>
-            <AccordionContent className="mx-8">
+            <AccordionContent key={Math.random()} className="mx-8">
               <div className="flex flex-row justify-between text-gray-700 my-8">
                 <div className="flex flex-col">
                   <h5 className="font-bold">{item.itineraryTitle}</h5>

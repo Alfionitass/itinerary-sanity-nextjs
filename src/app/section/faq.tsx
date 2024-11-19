@@ -25,7 +25,6 @@ export default async function Faq() {
   }
 
   const {title, faqOffer } = faq;
-  const id = Math.random();
   //   console.log("faqOffer", faqOffer);
   //   const gg = faqOffer?.map((item) => item.question);
   // const titles= faq?.title

@@ -55,17 +55,14 @@ export default async function Summary() {
 
   const {
     countryTitle,
-    year,
     summaryDesc,
     accomodation,
     meals,
     activity,
     itinerary,
-    summaryDetails,
     booking,
     image,
     code,
-    advantageList,
   } = summaries;
 
   //   console.log("imageTitle", Array.isArray(summaries.image));

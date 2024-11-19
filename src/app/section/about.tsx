@@ -1,6 +1,5 @@
 import { defineQuery, PortableText } from "next-sanity";
 import { sanityFetch } from "@/sanity/live";
-import { client } from "@/sanity/client";
 import PlaceIcon from '@mui/icons-material/Place';
 import { notFound } from "next/navigation";
 
