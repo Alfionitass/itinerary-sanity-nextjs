@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .itinerary h2[data-testid="flowbite-accordion-heading"] {
+    @apply w-10/12
+  }
+  .itinerary svg[data-testid="flowbite-accordion-arrow"] {
+    @apply mr-8
+  }
+  .faq svg[data-testid="flowbite-accordion-arrow"] {
+    @apply mr-8
+  }
+  .trip-year input {
+    @apply w-2/5 text-center bg-tosca text-white font-bold
+  }
+  .trip-year svg {
+    @apply invisible
+  }
+}
+
